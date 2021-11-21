@@ -12,9 +12,6 @@ with open(inp_file, mode='r') as csv_file, open(out_file, 'w') as out_f:
     line_count = 0
     for row in csv_reader:
         line_count+=1
-        if line_count % 1000000 == 0:
-            print(line_count)
-            print(row)
         # if line_count > 200000000:
         #     break
         object_id = row[1]
@@ -28,3 +25,6 @@ with open(inp_file, mode='r') as csv_file, open(out_file, 'w') as out_f:
         row[1] = str(int_id)
         csv_writer.writerow(row)
         # print(row)
+        if line_count % 1000000 == 0:
+            print(line_count)
+            print(row)

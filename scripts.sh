@@ -1,4 +1,4 @@
-# ssh-keygen -t ed25519 -C anshank-vm-4@cloudlab.com
+# ssh-keygen -t ed25519 -C anshank-vm-3@cloudlab.com
 # exec ssh-agent bash
 # eval "$(ssh-agent -s)"
 # cat ~/.ssh/id_ed25519.pub
@@ -19,5 +19,5 @@ sudo /usr/local/etc/emulab/mkextrafs.pl mydata
 sudo apt-get install -y aria2
 sudo apt-get install -y zstd
 cd mydata
-aria2c --file-allocation=none -c -x 16 -s 16 https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster32.0.zst
-zstd -d  'cluster32.0.zst' --stdout | parallel --pipe awk -F \'{print $1","$2","$4}\' > trail.txt
+aria2c --file-allocation=none -c -x 16 -s 16 https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster32.2.zst
+zstd -d  'cluster29.0.zst' --stdout | parallel --pipe awk -F \'{print $1","$2","$4}\' > twitter_trace.txt
