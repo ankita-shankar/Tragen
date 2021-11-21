@@ -112,6 +112,7 @@ f = open(input_file, "r")
 
 ## Initialize the LRU stack with objects from the trace
 i = 0
+print("=============1==============")
 while bytes_in_cache < 10*MIL:
 
     l   = f.readline()
@@ -136,7 +137,7 @@ while bytes_in_cache < 10*MIL:
     if line_count % 100000 == 0:
         print(line_count)
     
-    
+print("=============2==============")  
 
 lru.initialize(initial_objects, obj_sizes, initial_times)
 
@@ -203,7 +204,7 @@ while True:
 end_tm = tm        
 f.close()
 
-
+print("=============3==============")
 ## Write the other stats into the file
 ## Write footprint descriptor
 f = open(output_directory + "/fd.txt", "w")
