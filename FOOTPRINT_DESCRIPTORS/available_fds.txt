@@ -14,3 +14,4 @@
 15,tc-1,subset of tc trace that corresponds to images,8,243,Images
 16,tc-2,subset of tc trace that corresponds to media,40,141,Media
 17,tc-3,subset of tc trace that corresponds to web,250,406,Web
+18,twitter_29,subset of twitter 29 cluster for hit ratios,250,406,Web
