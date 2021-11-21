@@ -107,7 +107,10 @@ line_count        = 0
 
 input_file        = sys.argv[1]
 output_directory  = sys.argv[2]
-
+print(output_directory)
+f = open(output_directory + "/check.txt", "w")
+f.write("check")
+f.close()
 
 f = open(input_file, "r")
 

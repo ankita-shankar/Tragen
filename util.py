@@ -102,12 +102,14 @@ def plot_list(x, label="-", maxlim=100000000000):
 
 def write_footprint_descriptor(f, total_reqs, total_bytes_req, start_tm, end_tm, total_misses, bytes_miss, sd_distances):
     f.write(str(total_reqs) + " " + str(total_bytes_req) + " " + str(start_tm) + " " + str(end_tm) + " " + str(total_misses) + " " + str(bytes_miss) + "\n")
+    print(str(total_reqs) + " " + str(total_bytes_req) + " " + str(start_tm) + " " + str(end_tm) + " " + str(total_misses) + " " + str(bytes_miss) + "\n")
     iat_keys = list(sd_distances.keys())
     iat_keys.sort()
     for iat in iat_keys:
         keys, vals = convert_to_dict(sd_distances[iat], total_reqs)
         for i in range(len(keys)):
             f.write(str(iat) + " " + str(keys[i]) + " " + str(vals[i]) + "\n")
+            print(str(iat) + " " + str(keys[i]) + " " + str(vals[i]) + "\n")
     f.close()
 
 def write_byte_footprint_descriptor(f, total_reqs, total_bytes_req, start_tm, end_tm, total_misses, bytes_miss, sd_byte_distances):
