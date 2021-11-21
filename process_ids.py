@@ -28,3 +28,5 @@ with open(inp_file, mode='r') as csv_file, open(out_file, 'w') as out_f:
         if line_count % 1000000 == 0:
             print(line_count)
             print(row)
+# 1,003,710,919
+# 498,000,000
