@@ -129,8 +129,6 @@ while bytes_in_cache < 10*MIL:
         initial_objects.append(obj)        
         obj_sizes[obj] = sz
         bytes_in_cache += sz
-    else:
-        print(obj_sizes[obj])
 
     initial_times[obj] = tm
 
