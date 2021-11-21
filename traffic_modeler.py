@@ -114,7 +114,7 @@ f = open(input_file, "r")
 i = 0
 print("=============1==============")
 while bytes_in_cache < 10*MIL:
-
+    print("=============1-a==============")
     l   = f.readline()
     l   = l.strip().split(",")    
     tm  = int(l[0])
@@ -129,6 +129,8 @@ while bytes_in_cache < 10*MIL:
         initial_objects.append(obj)        
         obj_sizes[obj] = sz
         bytes_in_cache += sz
+    else:
+        print(obj_sizes[obj])
 
     initial_times[obj] = tm
 
@@ -138,6 +140,7 @@ while bytes_in_cache < 10*MIL:
         print(line_count)
     
 print("=============2==============")  
+print(bytes_in_cache)
 
 lru.initialize(initial_objects, obj_sizes, initial_times)
 
