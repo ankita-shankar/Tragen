@@ -227,6 +227,7 @@ write_iat_sz_dst(f, obj_iats, obj_sizes)
 ## made for the object) and the size of the object
 f = open(output_directory + "/popularity.txt", "w")
 write_popularity_dst(f, obj_reqs, obj_sizes)
+print("=============4==============")
 
 
 
