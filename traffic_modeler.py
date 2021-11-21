@@ -6,8 +6,9 @@ from treelib import *
 from util import *
 import random
 
-TB = 1000000000
-MIL = 1000000
+# multiply by thousand to compensate for twitter trace in bytes
+TB = 1000000000*1000
+MIL = 1000000*1000
 
 ## objects are assumed to be in KB
 class cache:
@@ -114,7 +115,6 @@ f = open(input_file, "r")
 i = 0
 print("=============1==============")
 while bytes_in_cache < 10*MIL:
-    print("=============1-a==============")
     l   = f.readline()
     l   = l.strip().split(",")    
     tm  = int(l[0])
