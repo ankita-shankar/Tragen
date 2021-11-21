@@ -22,3 +22,6 @@ cd mydata
 aria2c --file-allocation=none -c -x 16 -s 16 https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster32.2.zst
 zstd -d  'cluster29.0.zst' --stdout | parallel --pipe awk -F \'{print $1","$2","$4}\' > twitter_trace.txt
 nohup python3 -u traffic_modeler.py ../mydata/twitter_trace_29_mod.txt t_model > out.log &
+nohup cat twitter_trace_29_mod.txt | awk -F, '{print $2",,"$3",1"}' > twitter_trace_29_4cb.txt &
+nohup python3 -u tragen_cli.py -c trace_config.json > logs/gen1Btrace.log &
+# 372,709,226
