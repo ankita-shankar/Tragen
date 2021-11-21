@@ -134,7 +134,7 @@ while bytes_in_cache < 10*MIL:
 
     i += 1
     line_count += 1
-    if line_count % 100000 == 0:
+    if line_count % 1000000 == 0:
         print(line_count)
     
 print("=============2==============")  
