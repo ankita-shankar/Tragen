@@ -170,7 +170,7 @@ class TraceGenerator():
             n.set_b()            
 
             ## Add the object at the top of the list to the trace
-            c_trace.append(n.obj_id)      
+            # c_trace.append(n.obj_id)      
             temp_trace.append(n.obj_id) 
 
             if req_obj.obj_id > curr_max_seen:
@@ -245,7 +245,7 @@ class TraceGenerator():
 
             del_nodes = req_obj.cleanUpAfterInsertion(sd, n, debug)        
 
-            if i % 100000 == 0:
+            if i % 1000000 == 0:
                 self.log_file.write("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + "\n")
                 print("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + " evicted : " +  str(evicted_))
                 self.log_file.flush()
@@ -263,13 +263,13 @@ class TraceGenerator():
 
         # tm_now = int(time.time())
         # os.mkdir("OUTPUT/" + str(tm_now))
-        f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "w")
+        # f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "w")
 
         with open("OUTPUT/" + str(tm_now) + "/command.txt", 'w') as fp:
             fp.write('\n'.join(sys.argv[1:]))
             
         ## Assign timestamp based on the byte-rate of the FD
-        self.assign_timestamps(c_trace, sizes, fd.byte_rate, f)
+        # self.assign_timestamps(c_trace, sizes, fd.byte_rate, f)
 
         ## We are done!
         if self.printBox != None:
