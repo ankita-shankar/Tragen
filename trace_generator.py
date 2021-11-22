@@ -99,7 +99,9 @@ class TraceGenerator():
         no_desc   = 0
         fail      = 0
         curr_max_seen = 0
-        tm_now = int(time.time())
+        # tm_now = int(time.time())
+        now = datetime.datetime.now()
+        tm_now = now.strftime("%m_%d__%H_%M_%S")
         os.mkdir("OUTPUT/" + str(tm_now))
 
         stack_samples = fd.sample(1000)

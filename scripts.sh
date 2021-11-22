@@ -25,5 +25,5 @@ nohup python3 -u traffic_modeler.py ../mydata/twitter_trace_29_mod.txt t_model >
 nohup cat synthetic_trace_50M.txt | awk -F, '{print $2",,"$3",1"}' > synthetic_trace_50M_4cb.trace &
 nohup python3 -u tragen_cli.py -c trace_config.json -d twitter_out > logs/30mill_trace.log &
 # 372,709,226
-nohup python3 -u tragen_cli.py -c 100M_config.json -d twitter_out > logs/100M_trace.log &
+nohup python3 -u tragen_cli.py -c 500M_config.json -d twitter_out > logs/500M_trace.log &
 wc -l synthetic_trace_100M_4cb.trace 
