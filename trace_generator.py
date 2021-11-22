@@ -91,6 +91,7 @@ class TraceGenerator():
 
         ## Initialize
         c_trace   = []
+        temp_trace = []
         tries     = 0
         i         = 0
         j         = 0
@@ -98,6 +99,8 @@ class TraceGenerator():
         no_desc   = 0
         fail      = 0
         curr_max_seen = 0
+        tm_now = int(time.time())
+        os.mkdir("OUTPUT/" + str(tm_now))
 
         stack_samples = fd.sample(1000)
 
@@ -167,7 +170,8 @@ class TraceGenerator():
             n.set_b()            
 
             ## Add the object at the top of the list to the trace
-            c_trace.append(n.obj_id)        
+            c_trace.append(n.obj_id)      
+            temp_trace.append(n.obj_id) 
 
             if req_obj.obj_id > curr_max_seen:
                 curr_max_seen = req_obj.obj_id
@@ -248,6 +252,11 @@ class TraceGenerator():
                 if self.printBox != None:
                     self.printBox.setText("Generating synthetic trace: " + str(i*100/self.args.length) + "% complete ...")
                 self.curr_iter = i
+                f = open("OUTPUT/" + str(tm_now) + "/trace_without_timestamp.txt", "a")
+                for c in temp_trace:
+                    f.write(str(c) + "," + str(sizes[c]) + "\n")
+                f.close()
+                temp_trace = []
 
             reqs_seen[req_obj.obj_id] += 1
             i += 1
