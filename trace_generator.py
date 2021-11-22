@@ -262,7 +262,7 @@ class TraceGenerator():
             i += 1
 
         tm_now = int(time.time())
-        os.mkdir("OUTPUT/" + str(tm_now))
+        # os.mkdir("OUTPUT/" + str(tm_now))
         f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "w")
 
         with open("OUTPUT/" + str(tm_now) + "/command.txt", 'w') as fp:
