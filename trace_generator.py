@@ -261,7 +261,7 @@ class TraceGenerator():
             reqs_seen[req_obj.obj_id] += 1
             i += 1
 
-        tm_now = int(time.time())
+        # tm_now = int(time.time())
         # os.mkdir("OUTPUT/" + str(tm_now))
         f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "w")
 
