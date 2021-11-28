@@ -27,3 +27,16 @@ nohup python3 -u tragen_cli.py -c trace_config.json -d twitter_out > logs/30mill
 # 372,709,226
 nohup python3 -u tragen_cli.py -c 500M_config.json -d twitter_out > logs/500M_trace.log &
 wc -l synthetic_trace_100M_4cb.trace 
+./bin/cachebench --progress 1 --json_test_config ../../../29/synthetic_trace_config.json --progress_stats_file ../../../29/progress_stats_rt.txt
+./../CacheLibPrivate/opt/cachelib/./bin/cachebench --progress 1 --json_test_config ../../../29/synthetic_trace_config.json --progress_stats_file ../../../29/progress_stats_rt.txt
+grep -R 'Hit Ratio' . | sort -n
+nohup bash evaluate_cache_size > evaluate_800M_logs.txt &
+sort -k1 -n -t, cacheSize_vs_hitRatio_synthetic.csv > temp.txt && mv temp.txt cacheSize_vs_hitRatio_synthetic.csv
+./../CacheLibPrivate/opt/cachelib/bin/cachebench --progress 3 --json_test_config synthetic_trace_config.json --progress_stats_file synthetic_results_250M/8G/progress.txt > synthetic_results_250M/8G/final.txt
+13,100,000
+313,537,770
+./../../../CacheLibPrivate/opt/cachelib/bin/cachebench --progress 5 --json_test_config synthetic_trace_config.json --progress_stats_file results_txt.txt
+sort -k1 -n -t, ops_vs_hitRatio_synthetic_15G_600M.csv > temp.txt && mv temp.txt ops_vs_hitRatio_synthetic_15G_600M.csv
+grep 'ops completed\|RAM Hit' cache_size_13000.txt
+.*\s+(\d+\.\d+)M ops completed\nRAM Hit Ratio :  (\d+\.\d+)%
+./cache_size_(\d+)\.txt:Hit Ratio     :  (\d+\.\d+)%

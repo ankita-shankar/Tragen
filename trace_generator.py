@@ -172,7 +172,7 @@ class TraceGenerator():
             n.set_b()            
 
             ## Add the object at the top of the list to the trace
-            # c_trace.append(n.obj_id)      
+            c_trace.append(n.obj_id)      
             temp_trace.append(n.obj_id) 
 
             if req_obj.obj_id > curr_max_seen:
