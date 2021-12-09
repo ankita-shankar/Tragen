@@ -6,7 +6,8 @@ from treelib import *
 from util import *
 import random
 
-TB = 1000000000
+TB = 1000000000000
+GB = 1000000000
 MIL = 1000000
 
 ## objects are assumed to be in KB
@@ -91,7 +92,7 @@ class cache:
         return sd, dt
                 
 
-lru             = cache(10*TB)
+lru             = cache(GB)
 initial_objects = list()
 initial_times   = {}
 
@@ -112,7 +113,7 @@ f = open(input_file, "r")
 
 ## Initialize the LRU stack with objects from the trace
 i = 0
-while bytes_in_cache < 10*MIL:
+while bytes_in_cache < 1*MIL:
 
     l   = f.readline()
     l   = l.strip().split(",")    
@@ -143,7 +144,7 @@ lru.initialize(initial_objects, obj_sizes, initial_times)
 ## Stats to be processed later
 i          = 0
 line_count = 0
-max_len    = 200000000
+max_len    = 20000000
 start_tm   = 0
 total_bytes_req = 0
 total_reqs      = 0
