@@ -1,0 +1,25 @@
+19:39:22       0.00M ops completed
+19:39:25       4.12M ops completed
+RAM Hit Ratio :  70.72%
+19:39:28       8.22M ops completed
+RAM Hit Ratio :  71.31%
+19:39:31      12.26M ops completed
+RAM Hit Ratio :  71.38%
+19:39:34      16.35M ops completed
+RAM Hit Ratio :  71.58%
+19:39:37      20.40M ops completed
+RAM Hit Ratio :  71.59%
+19:39:40      24.50M ops completed
+RAM Hit Ratio :  71.67%
+19:39:43      28.58M ops completed
+RAM Hit Ratio :  71.62%
+19:39:46      32.69M ops completed
+RAM Hit Ratio :  71.62%
+19:39:49      36.72M ops completed
+RAM Hit Ratio :  71.64%
+19:39:52      40.83M ops completed
+RAM Hit Ratio :  71.66%
+19:39:55      44.92M ops completed
+RAM Hit Ratio :  71.64%
+19:39:58      49.01M ops completed
+RAM Hit Ratio :  71.58%
