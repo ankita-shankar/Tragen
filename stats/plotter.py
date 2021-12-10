@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 import csv
 
-def plot_stats(size):
+def plot_stats(size, num_ops, save_flag):
+    num_ops = str(num_ops)
     size = str(size)
-    real = '50M/real/'+size+'.txt'
-    synthetic = '50M/synthetic/'+size+'.txt'
+    real = num_ops+'M/real/'+size+'.txt'
+    synthetic = num_ops+'M/synthetic/'+size+'.txt'
     x = []
     y = []
     with open(real,'r') as csvfile:
@@ -26,14 +27,13 @@ def plot_stats(size):
     plt.xlabel('Num Ops (in Millions)')
     plt.ylabel('Hit Ratio')
     plt.title('Hit Ratio vs Num Ops. Cache Size(in MB) = '+size)
-    file_name = 'graphs/cacheSize_vs_hitRatio_500M.png'
     # plt.legend()
     plt.legend(loc="lower right")
 
     count = 0
     for a,b in zip(x1,y1):
         count +=1 
-        if count%5==0:
+        if count%7==0:
             plt.annotate(str(b), # this is the text
                         (a,b), # these are the coordinates to position the label
                         textcoords="offset points", # how to position the text
@@ -42,14 +42,22 @@ def plot_stats(size):
     count = 0
     for a,b in zip(x,y):
         count +=1 
-        if count%5==0:
+        if count%7==0:
             plt.annotate(str(b), # this is the text
                         (a,b), # these are the coordinates to position the label
                         textcoords="offset points", # how to position the text
                         xytext=(0,3), # distance from text to points (x,y)
                         ha='center') # horizontal alignment can be left, right or center
 
-    # plt.savefig(file_name)
+    if save_flag:
+        file_name = '../graphs/ops_vs_hr_'+size+'.png'
+        plt.savefig(file_name)
     plt.show()
 
-plot_stats(5000)
+num_ops = 50
+save_flag = True
+size = 1000
+max_cache_size = 8000
+while size <= max_cache_size:
+    plot_stats(size, num_ops, save_flag)
+    size += 1000
