@@ -1,61 +1,30 @@
-07:44:13       0.00M ops completed
-07:44:16       5.08M ops completed
-RAM Hit Ratio :  80.11%
-07:44:19      11.10M ops completed
-RAM Hit Ratio :  86.67%
-07:44:22      17.07M ops completed
-RAM Hit Ratio :  88.50%
-07:44:25      22.84M ops completed
-RAM Hit Ratio :  89.39%
-07:44:28      28.50M ops completed
-RAM Hit Ratio :  90.37%
-07:44:31      34.06M ops completed
-RAM Hit Ratio :  90.87%
-07:44:34      39.68M ops completed
-RAM Hit Ratio :  91.44%
-07:44:37      45.30M ops completed
-RAM Hit Ratio :  91.82%
-07:44:40      50.77M ops completed
-RAM Hit Ratio :  92.04%
-07:44:43      56.22M ops completed
-RAM Hit Ratio :  92.57%
-07:44:46      61.74M ops completed
-RAM Hit Ratio :  92.77%
-07:44:49      67.02M ops completed
-RAM Hit Ratio :  92.56%
-07:44:52      72.16M ops completed
-RAM Hit Ratio :  92.58%
-07:44:55      77.22M ops completed
-RAM Hit Ratio :  92.90%
-07:44:58      82.18M ops completed
-RAM Hit Ratio :  92.98%
-07:45:01      87.15M ops completed
-RAM Hit Ratio :  92.96%
-07:45:04      92.03M ops completed
-RAM Hit Ratio :  92.89%
-07:45:07      96.90M ops completed
-RAM Hit Ratio :  92.99%
-07:45:10     101.63M ops completed
-RAM Hit Ratio :  93.02%
-07:45:13     106.38M ops completed
-RAM Hit Ratio :  93.27%
-07:45:16     110.89M ops completed
-RAM Hit Ratio :  93.36%
-07:45:19     115.20M ops completed
-RAM Hit Ratio :  93.77%
-07:45:22     119.32M ops completed
-RAM Hit Ratio :  92.87%
-07:45:25     123.44M ops completed
-RAM Hit Ratio :  92.59%
-07:45:28     127.49M ops completed
-RAM Hit Ratio :  92.48%
-07:45:31     131.65M ops completed
-RAM Hit Ratio :  92.61%
-07:45:34     135.75M ops completed
-RAM Hit Ratio :  92.65%
-07:45:37     139.79M ops completed
-RAM Hit Ratio :  92.74%
-07:45:40     143.86M ops completed
-RAM Hit Ratio :  93.25%
-07:45:43     148.08M ops completed
-RAM Hit Ratio :  92.71%
+5.08,80.11
+11.10,86.67
+17.07,88.50
+22.84,89.39
+28.50,90.37
+34.06,90.87
+39.68,91.44
+45.30,91.82
+50.77,92.04
+56.22,92.57
+61.74,92.77
+67.02,92.56
+72.16,92.58
+77.22,92.90
+82.18,92.98
+87.15,92.96
+92.03,92.89
+96.90,92.99
+101.63,93.02
+106.38,93.27
+110.89,93.36
+115.20,93.77
+119.32,92.87
+123.44,92.59
+127.49,92.48
+131.65,92.61
+135.75,92.65
+139.79,92.74
+143.86,93.25
+148.08,92.71

@@ -1,65 +1,32 @@
-07:21:58       0.00M ops completed
-07:22:01       5.21M ops completed
-RAM Hit Ratio :  79.22%
-07:22:04      11.00M ops completed
-RAM Hit Ratio :  84.94%
-07:22:07      16.78M ops completed
-RAM Hit Ratio :  85.34%
-07:22:10      22.19M ops completed
-RAM Hit Ratio :  85.38%
-07:22:13      27.64M ops completed
-RAM Hit Ratio :  85.37%
-07:22:16      33.20M ops completed
-RAM Hit Ratio :  85.35%
-07:22:19      38.68M ops completed
-RAM Hit Ratio :  85.31%
-07:22:22      43.99M ops completed
-RAM Hit Ratio :  85.32%
-07:22:25      48.42M ops completed
-RAM Hit Ratio :  85.37%
-07:22:28      52.75M ops completed
-RAM Hit Ratio :  85.33%
-07:22:31      57.18M ops completed
-RAM Hit Ratio :  85.34%
-07:22:34      61.47M ops completed
-RAM Hit Ratio :  85.34%
-07:22:37      65.86M ops completed
-RAM Hit Ratio :  85.37%
-07:22:40      70.16M ops completed
-RAM Hit Ratio :  85.39%
-07:22:43      74.64M ops completed
-RAM Hit Ratio :  85.32%
-07:22:46      79.06M ops completed
-RAM Hit Ratio :  85.39%
-07:22:49      83.52M ops completed
-RAM Hit Ratio :  85.37%
-07:22:52      87.77M ops completed
-RAM Hit Ratio :  85.38%
-07:22:55      91.82M ops completed
-RAM Hit Ratio :  85.32%
-07:22:58      96.04M ops completed
-RAM Hit Ratio :  85.31%
-07:23:01     100.46M ops completed
-RAM Hit Ratio :  85.36%
-07:23:04     104.85M ops completed
-RAM Hit Ratio :  85.37%
-07:23:07     109.24M ops completed
-RAM Hit Ratio :  85.37%
-07:23:10     113.60M ops completed
-RAM Hit Ratio :  85.36%
-07:23:13     117.91M ops completed
-RAM Hit Ratio :  85.35%
-07:23:16     122.30M ops completed
-RAM Hit Ratio :  85.36%
-07:23:19     126.69M ops completed
-RAM Hit Ratio :  85.37%
-07:23:22     131.14M ops completed
-RAM Hit Ratio :  85.38%
-07:23:25     135.54M ops completed
-RAM Hit Ratio :  85.34%
-07:23:28     139.99M ops completed
-RAM Hit Ratio :  85.34%
-07:23:31     144.41M ops completed
-RAM Hit Ratio :  85.39%
-07:23:34     148.89M ops completed
-RAM Hit Ratio :  85.36%
+5.21,79.22
+11.00,84.94
+16.78,85.34
+22.19,85.38
+27.64,85.37
+33.20,85.35
+38.68,85.31
+43.99,85.32
+48.42,85.37
+52.75,85.33
+57.18,85.34
+61.47,85.34
+65.86,85.37
+70.16,85.39
+74.64,85.32
+79.06,85.39
+83.52,85.37
+87.77,85.38
+91.82,85.32
+96.04,85.31
+100.46,85.36
+104.85,85.37
+109.24,85.37
+113.60,85.36
+117.91,85.35
+122.30,85.36
+126.69,85.37
+131.14,85.38
+135.54,85.34
+139.99,85.34
+144.41,85.39
+148.89,85.36

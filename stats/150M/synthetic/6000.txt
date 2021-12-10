@@ -1,67 +1,33 @@
-07:23:35       0.00M ops completed
-07:23:38       4.90M ops completed
-RAM Hit Ratio :  78.93%
-07:23:41      10.72M ops completed
-RAM Hit Ratio :  84.85%
-07:23:44      16.48M ops completed
-RAM Hit Ratio :  85.33%
-07:23:47      22.00M ops completed
-RAM Hit Ratio :  85.39%
-07:23:50      27.49M ops completed
-RAM Hit Ratio :  85.37%
-07:23:53      32.62M ops completed
-RAM Hit Ratio :  85.33%
-07:23:56      37.95M ops completed
-RAM Hit Ratio :  85.33%
-07:23:59      43.15M ops completed
-RAM Hit Ratio :  85.31%
-07:24:02      48.36M ops completed
-RAM Hit Ratio :  85.36%
-07:24:05      53.33M ops completed
-RAM Hit Ratio :  85.32%
-07:24:08      57.57M ops completed
-RAM Hit Ratio :  85.36%
-07:24:11      61.75M ops completed
-RAM Hit Ratio :  85.33%
-07:24:14      65.94M ops completed
-RAM Hit Ratio :  85.39%
-07:24:17      70.16M ops completed
-RAM Hit Ratio :  85.39%
-07:24:20      74.37M ops completed
-RAM Hit Ratio :  85.33%
-07:24:23      78.54M ops completed
-RAM Hit Ratio :  85.38%
-07:24:26      82.74M ops completed
-RAM Hit Ratio :  85.36%
-07:24:29      86.91M ops completed
-RAM Hit Ratio :  85.40%
-07:24:32      91.10M ops completed
-RAM Hit Ratio :  85.33%
-07:24:35      95.28M ops completed
-RAM Hit Ratio :  85.31%
-07:24:38      99.49M ops completed
-RAM Hit Ratio :  85.35%
-07:24:41     103.70M ops completed
-RAM Hit Ratio :  85.38%
-07:24:44     107.88M ops completed
-RAM Hit Ratio :  85.37%
-07:24:47     112.12M ops completed
-RAM Hit Ratio :  85.36%
-07:24:50     116.27M ops completed
-RAM Hit Ratio :  85.33%
-07:24:53     120.51M ops completed
-RAM Hit Ratio :  85.36%
-07:24:56     124.49M ops completed
-RAM Hit Ratio :  85.38%
-07:24:59     128.72M ops completed
-RAM Hit Ratio :  85.37%
-07:25:02     132.91M ops completed
-RAM Hit Ratio :  85.36%
-07:25:05     137.15M ops completed
-RAM Hit Ratio :  85.34%
-07:25:08     141.38M ops completed
-RAM Hit Ratio :  85.36%
-07:25:11     145.67M ops completed
-RAM Hit Ratio :  85.38%
-07:25:14     149.87M ops completed
-RAM Hit Ratio :  85.36%
+4.90,78.93
+10.72,84.85
+16.48,85.33
+22.00,85.39
+27.49,85.37
+32.62,85.33
+37.95,85.33
+43.15,85.31
+48.36,85.36
+53.33,85.32
+57.57,85.36
+61.75,85.33
+65.94,85.39
+70.16,85.39
+74.37,85.33
+78.54,85.38
+82.74,85.36
+86.91,85.40
+91.10,85.33
+95.28,85.31
+99.49,85.35
+103.70,85.38
+107.88,85.37
+112.12,85.36
+116.27,85.33
+120.51,85.36
+124.49,85.38
+128.72,85.37
+132.91,85.36
+137.15,85.34
+141.38,85.36
+145.67,85.38
+149.87,85.36
