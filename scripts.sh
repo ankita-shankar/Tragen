@@ -20,7 +20,7 @@ sudo apt-get install -y aria2
 sudo apt-get install -y zstd
 cd mydata
 aria2c --file-allocation=none -c -x 16 -s 16 https://ftp.pdl.cmu.edu/pub/datasets/twemcacheWorkload/open_source/cluster32.2.zst
-zstd -d  'cluster29.0.zst' --stdout | parallel --pipe awk -F \'{print $1","$2","$4}\' > twitter_trace.txt
+zstd -d  'cluster29.0.zst' --stdout | awk -F, '{print $1","$2","$4}' > twitter_trace.txt
 nohup python3 -u traffic_modeler.py ../mydata/twitter_trace_29_mod.txt t_model > out.log &
 nohup cat synthetic_trace_50M.txt | awk -F, '{print $2",,"$3",1"}' > synthetic_trace_50M_4cb.trace &
 nohup python3 -u tragen_cli.py -c trace_config.json -d twitter_out > logs/30mill_trace.log &
@@ -33,10 +33,9 @@ grep -R 'Hit Ratio' . | sort -n
 nohup bash evaluate_cache_size > evaluate_800M_logs.txt &
 sort -k1 -n -t, cacheSize_vs_hitRatio_synthetic.csv > temp.txt && mv temp.txt cacheSize_vs_hitRatio_synthetic.csv
 ./../CacheLibPrivate/opt/cachelib/bin/cachebench --progress 3 --json_test_config synthetic_trace_config.json --progress_stats_file synthetic_results_250M/8G/progress.txt > synthetic_results_250M/8G/final.txt
-13,100,000
-313,537,770
 ./../../../CacheLibPrivate/opt/cachelib/bin/cachebench --progress 5 --json_test_config synthetic_trace_config.json --progress_stats_file results_txt.txt
 sort -k1 -n -t, ops_vs_hitRatio_synthetic_15G_600M.csv > temp.txt && mv temp.txt ops_vs_hitRatio_synthetic_15G_600M.csv
 grep 'ops completed\|RAM Hit' cache_size_13000.txt
+cp ../../../synthetic/results/filtered/* ../../../../../TragenPrivate/stats/50M/synthetic/
 .*\s+(\d+\.\d+)M ops completed\nRAM Hit Ratio :  (\d+\.\d+)%
 ./cache_size_(\d+)\.txt:Hit Ratio     :  (\d+\.\d+)%

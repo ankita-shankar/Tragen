@@ -1,123 +1,61 @@
-16:03:11       0.00M ops completed
-16:03:16      11.24M ops completed
-RAM Hit Ratio :  85.45%
-16:03:21      22.88M ops completed
-RAM Hit Ratio :  89.92%
-16:03:26      34.70M ops completed
-RAM Hit Ratio :  91.20%
-16:03:31      46.22M ops completed
-RAM Hit Ratio :  92.14%
-16:03:36      57.08M ops completed
-RAM Hit Ratio :  92.80%
-16:03:41      68.17M ops completed
-RAM Hit Ratio :  93.33%
-16:03:46      79.22M ops completed
-RAM Hit Ratio :  93.71%
-16:03:51      89.86M ops completed
-RAM Hit Ratio :  93.55%
-16:03:56      99.96M ops completed
-RAM Hit Ratio :  93.77%
-16:04:01     109.84M ops completed
-RAM Hit Ratio :  93.76%
-16:04:07     119.64M ops completed
-RAM Hit Ratio :  93.73%
-16:04:12     129.52M ops completed
-RAM Hit Ratio :  93.93%
-16:04:17     139.06M ops completed
-RAM Hit Ratio :  94.08%
-16:04:22     148.57M ops completed
-RAM Hit Ratio :  94.41%
-16:04:27     157.77M ops completed
-RAM Hit Ratio :  93.97%
-16:04:32     166.84M ops completed
-RAM Hit Ratio :  93.96%
-16:04:37     175.82M ops completed
-RAM Hit Ratio :  94.17%
-16:04:42     184.70M ops completed
-RAM Hit Ratio :  94.51%
-16:04:47     193.60M ops completed
-RAM Hit Ratio :  94.29%
-16:04:52     202.32M ops completed
-RAM Hit Ratio :  94.38%
-16:04:57     210.97M ops completed
-RAM Hit Ratio :  94.56%
-16:05:02     219.52M ops completed
-RAM Hit Ratio :  94.59%
-16:05:07     227.93M ops completed
-RAM Hit Ratio :  94.45%
-16:05:12     236.39M ops completed
-RAM Hit Ratio :  94.39%
-16:05:17     244.57M ops completed
-RAM Hit Ratio :  94.48%
-16:05:22     252.68M ops completed
-RAM Hit Ratio :  94.85%
-16:05:27     260.79M ops completed
-RAM Hit Ratio :  94.67%
-16:05:32     268.78M ops completed
-RAM Hit Ratio :  94.59%
-16:05:37     276.67M ops completed
-RAM Hit Ratio :  94.57%
-16:05:42     284.35M ops completed
-RAM Hit Ratio :  94.66%
-16:05:47     291.86M ops completed
-RAM Hit Ratio :  94.98%
-16:05:52     299.44M ops completed
-RAM Hit Ratio :  94.58%
-16:05:57     307.06M ops completed
-RAM Hit Ratio :  94.54%
-16:06:02     314.46M ops completed
-RAM Hit Ratio :  94.61%
-16:06:07     321.75M ops completed
-RAM Hit Ratio :  94.66%
-16:06:12     329.06M ops completed
-RAM Hit Ratio :  94.84%
-16:06:17     336.20M ops completed
-RAM Hit Ratio :  94.74%
-16:06:22     343.28M ops completed
-RAM Hit Ratio :  94.77%
-16:06:27     350.45M ops completed
-RAM Hit Ratio :  94.86%
-16:06:32     357.58M ops completed
-RAM Hit Ratio :  94.90%
-16:06:37     364.57M ops completed
-RAM Hit Ratio :  95.30%
-16:06:42     371.16M ops completed
-RAM Hit Ratio :  94.88%
-16:06:47     377.74M ops completed
-RAM Hit Ratio :  94.88%
-16:06:52     384.54M ops completed
-RAM Hit Ratio :  94.89%
-16:06:57     391.26M ops completed
-RAM Hit Ratio :  95.04%
-16:07:02     398.28M ops completed
-RAM Hit Ratio :  94.98%
-16:07:07     405.19M ops completed
-RAM Hit Ratio :  95.20%
-16:07:12     412.02M ops completed
-RAM Hit Ratio :  95.45%
-16:07:17     418.72M ops completed
-RAM Hit Ratio :  95.08%
-16:07:22     425.28M ops completed
-RAM Hit Ratio :  95.17%
-16:07:27     431.82M ops completed
-RAM Hit Ratio :  95.20%
-16:07:32     438.60M ops completed
-RAM Hit Ratio :  95.10%
-16:07:37     445.17M ops completed
-RAM Hit Ratio :  95.13%
-16:07:42     451.65M ops completed
-RAM Hit Ratio :  95.13%
-16:07:47     458.12M ops completed
-RAM Hit Ratio :  95.18%
-16:07:52     464.55M ops completed
-RAM Hit Ratio :  95.27%
-16:07:57     471.18M ops completed
-RAM Hit Ratio :  95.19%
-16:08:02     477.44M ops completed
-RAM Hit Ratio :  95.31%
-16:08:07     483.72M ops completed
-RAM Hit Ratio :  95.46%
-16:08:12     490.15M ops completed
-RAM Hit Ratio :  95.73%
-16:08:17     496.55M ops completed
-RAM Hit Ratio :  95.71%
+11.24,85.45
+22.88,89.92
+34.70,91.20
+46.22,92.14
+57.08,92.80
+68.17,93.33
+79.22,93.71
+89.86,93.55
+99.96,93.77
+109.84,93.76
+119.64,93.73
+129.52,93.93
+139.06,94.08
+148.57,94.41
+157.77,93.97
+166.84,93.96
+175.82,94.17
+184.70,94.51
+193.60,94.29
+202.32,94.38
+210.97,94.56
+219.52,94.59
+227.93,94.45
+236.39,94.39
+244.57,94.48
+252.68,94.85
+260.79,94.67
+268.78,94.59
+276.67,94.57
+284.35,94.66
+291.86,94.98
+299.44,94.58
+307.06,94.54
+314.46,94.61
+321.75,94.66
+329.06,94.84
+336.20,94.74
+343.28,94.77
+350.45,94.86
+357.58,94.90
+364.57,95.30
+371.16,94.88
+377.74,94.88
+384.54,94.89
+391.26,95.04
+398.28,94.98
+405.19,95.20
+412.02,95.45
+418.72,95.08
+425.28,95.17
+431.82,95.20
+438.60,95.10
+445.17,95.13
+451.65,95.13
+458.12,95.18
+464.55,95.27
+471.18,95.19
+477.44,95.31
+483.72,95.46
+490.15,95.73
+496.55,95.71
