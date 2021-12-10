@@ -33,7 +33,7 @@ def plot_stats(size, num_ops, save_flag):
     count = 0
     for a,b in zip(x1,y1):
         count +=1 
-        if count%7==0:
+        if count%3==0:
             plt.annotate(str(b), # this is the text
                         (a,b), # these are the coordinates to position the label
                         textcoords="offset points", # how to position the text
@@ -42,7 +42,7 @@ def plot_stats(size, num_ops, save_flag):
     count = 0
     for a,b in zip(x,y):
         count +=1 
-        if count%7==0:
+        if count%3==0:
             plt.annotate(str(b), # this is the text
                         (a,b), # these are the coordinates to position the label
                         textcoords="offset points", # how to position the text
@@ -52,12 +52,13 @@ def plot_stats(size, num_ops, save_flag):
     if save_flag:
         file_name = '../graphs/ops_vs_hr_'+size+'.png'
         plt.savefig(file_name)
-    plt.show()
+    # plt.show()
+    plt.clf()
 
 num_ops = 50
 save_flag = True
 size = 1000
-max_cache_size = 8000
+max_cache_size = 5000
 while size <= max_cache_size:
     plot_stats(size, num_ops, save_flag)
     size += 1000
