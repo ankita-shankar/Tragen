@@ -92,7 +92,7 @@ class cache:
         return sd, dt
                 
 
-lru             = cache(GB)
+lru             = cache(8*GB)
 initial_objects = list()
 initial_times   = {}
 
@@ -113,8 +113,9 @@ f = open(input_file, "r")
 
 ## Initialize the LRU stack with objects from the trace
 i = 0
-while bytes_in_cache < 1*MIL:
-
+print("well it does come here"+str(bytes_in_cache))
+while bytes_in_cache < 10*MIL:
+    
     l   = f.readline()
     l   = l.strip().split(",")    
     tm  = int(l[0])
@@ -134,8 +135,8 @@ while bytes_in_cache < 1*MIL:
 
     i += 1
     line_count += 1
-    if line_count % 100000 == 0:
-        print(line_count)
+    if line_count % 1000 == 0:
+        print(str(line_count)+" and bytes in cache are : "+str(bytes_in_cache))
     
     
 
@@ -144,7 +145,7 @@ lru.initialize(initial_objects, obj_sizes, initial_times)
 ## Stats to be processed later
 i          = 0
 line_count = 0
-max_len    = 20000000
+max_len    = 800000000
 start_tm   = 0
 total_bytes_req = 0
 total_reqs      = 0
@@ -194,7 +195,7 @@ while True:
     obj_iats[obj].append(iat)        
     i += 1
     
-    if line_count%100000 == 0:
+    if line_count%10000000 == 0:
         print("Processed : ", line_count)    
 
     line_count += 1
@@ -204,7 +205,7 @@ while True:
 end_tm = tm        
 f.close()
 
-
+print("done processing "+str(line_count)+" now opening files to write")
 ## Write the other stats into the file
 ## Write footprint descriptor
 f = open(output_directory + "/fd.txt", "w")
