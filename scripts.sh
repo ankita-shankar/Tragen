@@ -1,8 +1,12 @@
-# ssh-keygen -t ed25519 -C anshank-vm-3@cloudlab.com
-# exec ssh-agent bash
-# eval "$(ssh-agent -s)"
-# cat ~/.ssh/id_ed25519.pub
+ssh-keygen -t ed25519 -C anshank-vm-3@cloudlab.com
+exec ssh-agent bash
+eval "$(ssh-agent -s)"
+cat ~/.ssh/id_ed25519.pub
 # git clone git@github.com:ankita-shankar/Tragen.git
+sudo mkdir -p data
+sudo chmod 777 data
+sudo /usr/local/etc/emulab/mkextrafs.pl data
+
 sudo apt-get update
 sudo apt-get -y install python3-pip
 pip3 install numpy
@@ -13,9 +17,11 @@ sudo apt install libjpeg-dev zlib1g-dev
 pip3 install Pillow
 pip3 install matplotlib
 
-sudo mkdir -p mydata
-sudo chmod 777 mydata
-sudo /usr/local/etc/emulab/mkextrafs.pl mydata
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws configure
+
 sudo apt-get install -y aria2
 sudo apt-get install -y zstd
 cd mydata
@@ -39,3 +45,6 @@ grep 'ops completed\|RAM Hit' cache_size_13000.txt
 cp ../../../synthetic/results/filtered/* ../../../../../TragenPrivate/stats/50M/synthetic/
 .*\s+(\d+\.\d+)M ops completed\nRAM Hit Ratio :  (\d+\.\d+)%
 ./cache_size_(\d+)\.txt:Hit Ratio     :  (\d+\.\d+)%
+aws s3 cp mydata/29/nozero_real_trace.txt s3://cloudlab-ankita/nozero_real_trace.txt
+aws s3 cp s3://cloudlab-ankita/nozero_real_trace.txt data/29/nozero_real_trace.txt 
+#https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/cp.html
