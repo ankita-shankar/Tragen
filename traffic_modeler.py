@@ -6,9 +6,8 @@ from treelib import *
 from util import *
 import random
 
-# multiply by thousand to compensate for twitter trace in bytes
-TB = 1000000000*1000
-MIL = 1000000*1000
+TB = 1000000000
+MIL = 1000000
 
 ## objects are assumed to be in KB
 class cache:
@@ -113,8 +112,8 @@ f = open(input_file, "r")
 
 ## Initialize the LRU stack with objects from the trace
 i = 0
-print("=============1==============")
 while bytes_in_cache < 10*MIL:
+
     l   = f.readline()
     l   = l.strip().split(",")    
     tm  = int(l[0])
@@ -129,8 +128,6 @@ while bytes_in_cache < 10*MIL:
         initial_objects.append(obj)        
         obj_sizes[obj] = sz
         bytes_in_cache += sz
-    else:
-        print(obj_sizes[obj])
 
     initial_times[obj] = tm
 
@@ -139,8 +136,7 @@ while bytes_in_cache < 10*MIL:
     if line_count % 100000 == 0:
         print(line_count)
     
-print("=============2==============")  
-print(bytes_in_cache)
+    
 
 lru.initialize(initial_objects, obj_sizes, initial_times)
 
@@ -207,7 +203,7 @@ while True:
 end_tm = tm        
 f.close()
 
-print("=============3==============")
+
 ## Write the other stats into the file
 ## Write footprint descriptor
 f = open(output_directory + "/fd.txt", "w")
