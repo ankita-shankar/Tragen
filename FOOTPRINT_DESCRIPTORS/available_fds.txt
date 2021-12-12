@@ -15,4 +15,4 @@ i2,w,traffic collected from servers predominantly serving web traffic,2.29,5860,
 16,tc-2,subset of tc trace that corresponds to media,40,141,Media
 17,tc-3,subset of tc trace that corresponds to web,250,406,Web
 18,twitter_29, subset of twitter trace,250,406,Web
-19,twitter_800M,subset of twiiter trace,250,406,Web
+19,twitter_800m,subset of twiiter trace,250,406,Web
