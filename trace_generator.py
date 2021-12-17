@@ -102,6 +102,7 @@ class TraceGenerator():
         curr_max_seen = 0
         tm_now = int(time.time())
         os.mkdir("OUTPUT/" + str(tm_now))
+        print("Generated trace can be found in: OUTPUT/"+str(tm_now)+" folder")
 
         stack_samples = fd.sample(1000)
 
@@ -245,7 +246,7 @@ class TraceGenerator():
 
             del_nodes = req_obj.cleanUpAfterInsertion(sd, n, debug)        
 
-            if i % 1000 == 0:
+            if i % 100000 == 0:
                 self.log_file.write("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + "\n")
                 print("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + " evicted : " +  str(evicted_))
                 self.log_file.flush()
