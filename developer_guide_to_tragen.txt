@@ -1,0 +1,40 @@
+1. Installation notes, we recommend installing packages in this order and versioning:
+    sudo apt-get update
+    sudo apt-get -y install python3-pip
+    pip3 install numpy
+    pip3 install scipy
+    pip3 install datetime
+    pip3 install PyQt5==5.12.2
+    sudo apt install libjpeg-dev zlib1g-dev
+    pip3 install Pillow
+    pip3 install matplotlib
+2. Steps to create a new model:
+    a. ensure the trace is in format of : (timestamp, object_id, object_size(bytes)). object_id should be integer values.
+        # zstd -d  'cluster29.0.zst' --stdout | awk -F, '{print $1","$2","$4}' > twitter_trace.txt
+        # one can use, process_ids.py to convert object_id into integers
+    b. nohup python3 -u traffic_modeler.py <path_to_original_trace> <FOOTPRINT_DESCRIPTORS/model_name/ > log.txt &
+        # depending on how big are the objects, ensure that cache does get filled and we still have sufficient trace left to compute FDs
+        # so select cache size and bytes_in_cache number accordingly
+    c. once you have new model, create an entry for it in available_fds.txt. 
+        # 19,twitter_800m,subset of twiiter trace,250,406,Web
+        # just increment line no.(19) and replace (twitter_800m) with your model_name, rest all can be left same
+3. Steps to generate trace using new model
+    a. python3 tragen_cli.py -c <config_file> -d <output_directory>
+    a. nohup python3 -u tragen_cli.py -c trace_config.json -d "output_directory" > log.txt &
+        # output_directory is can be any random directory, no one cares
+        # after this finishes to run, generated trace can be found at OUTPUT/curr_timestamp/gen_sequence.txt
+        # to convert in cachebench format, "cat gen_sequence.txt | awk -F, '{print $2",,"$3",1"}' > trace_in_cachebench_format.trace"
+4. to automate evaluations, one can refer to, 
+    evaluate_cache.sh
+    filter_progress.sh
+    stats/plotter.py
+
+General tips and tricks:    
+1. extending storage in cloudlab. a new folder called 'data' with random amount storage will appear in root
+    sudo mkdir -p data
+    sudo chmod 777 data
+    sudo /usr/local/etc/emulab/mkextrafs.pl data
+2. capital letters should not be used while naming new models
+3. aws s3 is a good place to store large files, if one doesn't want to bother dealing with cloudlab retrictions. aws cli makes things really easy and fast.
+4. if you plan to use evaluate_cache.sh then you should install jq first using, sudo apt-get install jq
+5. while downloading huge traces, consider using, aria2 utility for downloads(sudo apt-get install -y aria2)
