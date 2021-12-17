@@ -17,6 +17,8 @@ class TraceGenerator():
         self.read_popularity_dst()
         self.curr_iter = 0
         self.printBox = printBox
+        self.timestamp = 0
+        self.KB_added = 0
         
 
     ## Generate a synthetic trace
@@ -98,6 +100,8 @@ class TraceGenerator():
         no_desc   = 0
         fail      = 0
         curr_max_seen = 0
+        tm_now = int(time.time())
+        os.mkdir("OUTPUT/" + str(tm_now))
 
         stack_samples = fd.sample(1000)
 
@@ -241,26 +245,24 @@ class TraceGenerator():
 
             del_nodes = req_obj.cleanUpAfterInsertion(sd, n, debug)        
 
-            if i % 100000 == 0:
+            if i % 1000 == 0:
                 self.log_file.write("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + "\n")
                 print("Trace computed : " +  str(i) + " " +  str(datetime.datetime.now()) +  " " + str(root.s) + " " + str(total_objects) + " " + str(curr_max_seen) + " fail : " + str(fail) + " sz added : " + str(sz_added) + " sz_removed : " + str(sz_removed) + " evicted : " +  str(evicted_))
                 self.log_file.flush()
                 if self.printBox != None:
                     self.printBox.setText("Generating synthetic trace: " + str(i*100/self.args.length) + "% complete ...")
                 self.curr_iter = i
+                f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "a")
+                ## Assign timestamp based on the byte-rate of the FD
+                self.assign_timestamps(c_trace, sizes, fd.byte_rate, f)
+                f.close()
+                c_trace = []
 
             reqs_seen[req_obj.obj_id] += 1
             i += 1
 
-        tm_now = int(time.time())
-        os.mkdir("OUTPUT/" + str(tm_now))
-        f = open("OUTPUT/" + str(tm_now) + "/gen_sequence.txt", "w")
-
         with open("OUTPUT/" + str(tm_now) + "/command.txt", 'w') as fp:
             fp.write('\n'.join(sys.argv[1:]))
-            
-        ## Assign timestamp based on the byte-rate of the FD
-        self.assign_timestamps(c_trace, sizes, fd.byte_rate, f)
 
         ## We are done!
         if self.printBox != None:
@@ -269,17 +271,15 @@ class TraceGenerator():
 
     ## Assign timestamp based on the byte-rate of the FD
     def assign_timestamps(self, c_trace, sizes, byte_rate, f):
-        timestamp = 0
-        KB_added = 0
         KB_rate = byte_rate/1000
 
         for c in c_trace:
-            KB_added += sizes[c]
-            f.write(str(timestamp) + "," + str(c) + "," + str(sizes[c]) + "\n")
+            self.KB_added += sizes[c]
+            f.write(str(self.timestamp) + "," + str(c) + "," + str(sizes[c]) + "\n")
 
-            if KB_added >= KB_rate:
-                timestamp += 1
-                KB_added = 0
+            if self.KB_added >= KB_rate:
+                self.timestamp += 1
+                self.KB_added = 0
             
 
     ## Read object size distribution of the required traffic classes
