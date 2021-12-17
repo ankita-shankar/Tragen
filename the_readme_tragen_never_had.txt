@@ -27,7 +27,7 @@
 4. to automate evaluations, one can refer to, 
     evaluate_cache.sh
     filter_progress.sh
-    plotter.py
+    stats/plotter.py
 
 General tips and tricks:    
 1. extending storage in cloudlab. a new folder called 'data' with random amount storage will appear in root
