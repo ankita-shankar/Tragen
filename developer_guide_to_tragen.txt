@@ -36,3 +36,5 @@ General tips and tricks:
     sudo /usr/local/etc/emulab/mkextrafs.pl data
 2. capital letters should not be used while naming new models
 3. aws s3 is a good place to store large files, if one doesn't want to bother dealing with cloudlab retrictions. aws cli makes things really easy and fast.
+4. if you plan to use evaluate_cache.sh then you should install jq first using, sudo apt-get install jq
+5. while downloading huge traces, consider using, aria2 utility for downloads(sudo apt-get install -y aria2)
