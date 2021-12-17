@@ -121,6 +121,9 @@ while bytes_in_cache < 10*MIL:
     tm  = int(l[0])
     obj = int(l[1])
     sz  = int(l[2])
+
+    if sz <= 0:
+	    sz = 1
     
     obj_reqs[obj] += 1
     obj_iats[obj].append(-1)
@@ -163,6 +166,8 @@ while True:
         tm  = int(l[0])
         obj = int(l[1])
         sz  = int(l[2])
+        if sz <= 0:
+	        sz = 1
     except:
         break
         
